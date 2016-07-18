@@ -1,11 +1,141 @@
 1.1. Running Python Interpreter
 -------------------------------
 Problem 1: Open a new Python interpreter and use it to find the value of 2 + 3.
+ans 1:
 >>> 2 + 3
 5
 
 1.2. Running Python Scripts
 ---------------------------
 Problem 2: Create a python script to print hello, world! four times.
+ans 2:
+hello.py:
 print "hello, world!"
 print "hello, world!"
+print "hello, world!"
+print "hello, world!"
+
+Problem 3: Create a python script with the following text and see the output.
+
+1 + 2
+If it doesn’t print anything, what changes can you make to the program to print the value?
+ans 3:
+print "1+2"
+
+1.3. Assignments
+----------------
+Problem 4: What will be output of the following program.
+
+x = 4
+y = x + 1
+x = 2
+print x, y
+ans 4: 2 5
+
+Problem 5: What will be the output of the following program.
+
+x, y = 2, 6
+x, y = y, x + 2
+print x, y
+ans 5: 6 4
+
+Problem 6: What will be the output of the following program.
+
+a, b = 2, 3
+c, b = a, c + 1
+print a, b, c
+ans 6: 2 3
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'c' is not defined
+
+1.4. Numbers
+------------
+Python supports the following operators on numbers.
+
++ addition
+- subtraction
+* multiplication
+/ division
+** exponent
+% remainder
+
+1.5. Strings
+------------
+>>> x = "hello"
+>>> y = 'world'
+>>> print x, y
+hello world
+
+1.6. Functions
+--------------
+numcalls = 0
+def square(x):
+    global numcalls
+    numcalls = numcalls + 1
+    return x * x
+    
+Problem 7: How many multiplications are performed when each of the following lines of code is executed?
+
+print square(5)
+print square(2*5)
+
+ans 7:25 100
+Problem 8: What will be the output of the following program?
+
+x = 1
+def f():
+    return x
+print x
+print f()
+
+ans 8:1 1
+Problem 9: What will be the output of the following program?
+
+x = 1
+def f():
+    x = 2
+    return x
+print x
+print f()
+print x
+
+ans 9:1 2 1
+Problem 10: What will be the output of the following program?
+
+x = 1
+def f():
+        y = x
+        x = 2
+        return x + y
+print x
+print f()
+print x
+ans 10:1
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 2, in f
+UnboundLocalError: local variable 'x' referenced before assignment
+1
+
+Problem 11: What will be the output of the following program?
+
+x = 2
+def f(a):
+    x = a * a
+    return x
+y = f(3)
+print x, y
+ans 11:2 9
+
+1.6.1. Built-in Functions
+-------------------------
+Problem 12: Write a function count_digits to find number of digits in the given number.
+
+>>> count_digits(5)
+1
+>>> count_digits(12345)
+5
+ans 12:
+def count_digits(x):
+    return len(str(x))
