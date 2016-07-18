@@ -1,0 +1,11 @@
+1.1. Running Python Interpreter
+-------------------------------
+Problem 1: Open a new Python interpreter and use it to find the value of 2 + 3.
+>>> 2 + 3
+5
+
+1.2. Running Python Scripts
+---------------------------
+Problem 2: Create a python script to print hello, world! four times.
+print "hello, world!"
+print "hello, world!"
