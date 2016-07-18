@@ -213,3 +213,17 @@ Here is a list of numbers.
 And here is a list of strings.
 
 >>> x = ["hello", "world"]
+
+1.9. Modules
+------------
+Problem 19: Write a program add.py that takes 2 numbers as command line arguments and prints its sum.
+
+$ python add.py 3 5
+8
+$ python add.py 2 9
+11
+ans 19:
+add.py:
+import sys
+print int(sys.argv[1]) + int(sys.argv[2])
+
