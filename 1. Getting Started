@@ -139,3 +139,77 @@ Problem 12: Write a function count_digits to find number of digits in the given 
 ans 12:
 def count_digits(x):
     return len(str(x))
+
+1.6.2. Methods
+--------------
+Problem 13: Write a function istrcmp to compare two strings, ignoring the case.
+
+>>> istrcmp('python', 'Python')
+True
+>>> istrcmp('LaTeX', 'Latex')
+True
+>>> istrcmp('a', 'b')
+False
+ans 13:
+def istrcmp(x,y):
+    return x.upper()==y.upper()
+
+1.7. Conditional Expressions
+----------------------------
+Problem 14: What will be output of the following program?
+
+print 2 < 3 and 3 > 1
+print 2 < 3 or 3 > 1
+print 2 < 3 or not 3 > 1
+print 2 < 3 and not 3 > 1
+
+ans 14: True True True True
+Problem 15: What will be output of the following program?
+
+x = 4
+y = 5
+p = x < y or x < z
+print p
+ans 15:True
+
+Problem 16: What will be output of the following program?
+
+True, False = False, True
+print True, False
+print 2 < 3
+ans 16:False True
+True
+
+1.7.1. The if statement
+-----------------------
+Problem 17: What happens when the following code is executed? Will it give any error? Explain the reasons.
+
+x = 2
+if x == 2:
+    print x
+else:
+    print y
+
+ans 17: 2
+
+Problem 18: What happens the following code is executed? Will it give any error? Explain the reasons.
+
+x = 2
+if x == 2:
+    print x
+else:
+    x +
+    
+ans 18:File "<stdin>", line 4
+    x +
+      ^
+SyntaxError: invalid syntax
+
+1.8. Lists
+-----------
+Here is a list of numbers.
+
+>>> x = [1, 2, 3]
+And here is a list of strings.
+
+>>> x = ["hello", "world"]
