@@ -50,25 +50,53 @@ Problem 4: Implement a function product, to compute product of a list of numbers
 6
 
 ans 4:
-def product(a):
-...     s=i=0
-...     for a[i] in a:
-...             s=s*a[i]
-...     print s
+def product(list):
+    p = 1
+    for i in list:
+        p *= i
+    return p
 
 Problem 5: Write a function factorial to compute factorial of a number. Can you use the product function defined in the 
 previous example to compute factorial?
 
 >>> factorial(4)
 24
+ans 5:
+def factorial(n):
+    num = 1
+    for n >= 1:
+        num = num * n
+        n = n - 1
+    return num
+
 Problem 6: Write a function reverse to reverse a list. Can you do this without using list slicing?
 
 >>> reverse([1, 2, 3, 4])
 [4, 3, 2, 1]
 >>> reverse(reverse([1, 2, 3, 4]))
 [1, 2, 3, 4]
+
+ans 6:
+def reverse(text):
+
+    lst = []
+    count = 1
+
+    for i in range(0,len(text)):
+
+        lst.append(text[len(text)-count])
+        count += 1
+
+ 
 Problem 7: Python has built-in functions min and max to compute minimum and maximum of a given list. Provide an implementation
 for these functions. What happens when you call your min and max functions with a list of strings?
+
+ a=[1,2,3,6,4]
+
+min(a)
+1
+>>> max(a)
+6
 
 Problem 8: Cumulative sum of a list [a, b, c, ...] is defined as [a, a+b, a+b+c, ...]. Write a function cumulative_sum to 
 compute cumulative sum of a list. Does your implementation work for a list of strings?
