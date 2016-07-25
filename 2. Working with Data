@@ -21,6 +21,14 @@ Problem 2: Python has a built-in function sum to find sum of all elements of a l
 
 >>> sum([1, 2, 3])
 >>> 6
+
+ans 2:
+def sum(a):
+...     s=0
+...     for i in a:
+...             s=s+i
+...     print s
+
 Problem 3: What happens when the above sum function is called with a list of strings? Can you make your sum function work for
 a list of strings as well.
 
@@ -28,10 +36,26 @@ a list of strings as well.
 "helloworld"
 >>> sum(["aa", "bb", "cc"])
 "aabbcc"
+
+ans 3:
+ def sum(a):
+...     s=''
+...     for i in a:
+...             s=s+i
+...     print s
+
 Problem 4: Implement a function product, to compute product of a list of numbers.
 
 >>> product([1, 2, 3])
 6
+
+ans 4:
+def product(a):
+...     s=i=0
+...     for a[i] in a:
+...             s=s*a[i]
+...     print s
+
 Problem 5: Write a function factorial to compute factorial of a number. Can you use the product function defined in the 
 previous example to compute factorial?
 
