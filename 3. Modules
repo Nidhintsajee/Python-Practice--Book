@@ -96,3 +96,34 @@ Problem 10: Write a program myip.py to print the external IP address of the mach
 and read the IP address from there. The program should print only the IP address and nothing else.
 
 3.1.5. zipfile module
+Problem 11: Write a python program zip.py to create a zip file. The program should take name of zip file as first argument 
+and files to add as rest of the arguments.
+
+$ python zip.py foo.zip file1.txt file2.txt
+Problem 12: Write a program mydoc.py to implement the functionality of pydoc. The program should take the module name as 
+argument and print documentation for the module and each of the functions defined in that module.
+
+$ python mydoc.py os
+Help on module os:
+
+DESCRIPTION
+
+os - OS routines for Mac, NT, or Posix depending on what system we're on.
+...
+
+FUNCTIONS
+
+getcwd()
+    ...
+Hints:
+The dir function to get all entries of a module
+The inspect.isfunction function can be used to test if given object is a function
+x.__doc__ gives the docstring for x.
+The __import__ function can be used to import a module by name
+3.2. Installing third-party modules
+Problem 13: Write a program csv2xls.py that reads a csv file and exports it as Excel file. The prigram should take two 
+arguments. The name of the csv file to read as first argument and the name of the Excel file to write as the second argument.
+
+Problem 14: Create a new virtualenv and install BeautifulSoup. BeautifulSoup is very good library for parsing HTML. Try using
+it to extract all HTML links from a webpage.
+
