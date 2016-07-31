@@ -20,3 +20,40 @@ a = A()
 b = B()
 print a.f(), b.f()
 print a.g(), b.g()
+4.4. Special Class Methods
+4.5. Errors and Exceptions
+Problem 2: What will be the output of the following program?
+
+try:
+    print "a"
+except:
+    print "b"
+else:
+    print "c"
+finally:
+    print "d"
+Problem 3: What will be the output of the following program?
+
+try:
+    print "a"
+    raise Exception("doom")
+except:
+    print "b"
+else:
+    print "c"
+finally:
+    print "d"
+Problem 4: What will be the output of the following program?
+
+def f():
+    try:
+        print "a"
+        return
+    except:
+        print "b"
+    else:
+        print "c"
+    finally:
+        print "d"
+
+f()
