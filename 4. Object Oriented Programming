@@ -25,6 +25,7 @@ print a.f(), b.f()
 print a.g(), b.g()
 
 4.4. Special Class Methods
+
 4.5. Errors and Exceptions
 Problem 2: What will be the output of the following program?
 
