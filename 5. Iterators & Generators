@@ -1,1 +1,65 @@
+5. Iterators & Generators
+5.1. Iterators
+5.1.1. The Iteration Protocol
+
+Problem 1: Write an iterator class reverse_iter, that takes a list and iterates it from the reverse direction. ::
+
+>>> it = reverse_iter([1, 2, 3, 4])
+>>> it.next()
+4
+>>> it.next()
+3
+>>> it.next()
+2
+>>> it.next()
+1
+>>> it.next()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+StopIteration
+
+5.2. Generators
+
+5.3. Generator Expressions
+
+5.3.1. Example: Reading multiple files
+
+Problem 2: Write a program that takes one or more filenames as arguments and prints all the lines which are longer than 40 
+characters.
+
+Problem 3: Write a function findfiles that recursively descends the directory tree for the specified directory and generates
+paths of all the files in the tree.
+
+Problem 4: Write a function to compute the number of python files (.py extension) in a specified directory recursively.
+
+Problem 5: Write a function to compute the total number of lines of code in all python files in the specified directory 
+recursively.
+
+Problem 6: Write a function to compute the total number of lines of code, ignoring empty and comment lines, in all python 
+files in the specified directory recursively.
+
+Problem 7: Write a program split.py, that takes an integer n and a filename as command line arguments and splits the file 
+into multiple small files with each having n lines.
+
+5.4. Itertools
+Problem 8: Write a function peep, that takes an iterator as argument and returns the first element and an equivalant iterator.
+
+>>> it = iter(range(5))
+>>> x, it1 = peep(it)
+>>> print x, list(it1)
+0 [0, 1, 2, 3, 4]
+Problem 9: The built-in function enumerate takes an iteratable and returns an iterator over pairs (index, value) for each 
+value in the source.
+
+>>> list(enumerate(["a", "b", "c"])
+[(0, "a"), (1, "b"), (2, "c")]
+>>> for i, c in enumerate(["a", "b", "c"]):
+...     print i, c
+...
+0 a
+1 b
+2 c
+Write a function my_enumerate that works like enumerate.
+
+Problem 10: Implement a function izip that works like itertools.izip.
 
