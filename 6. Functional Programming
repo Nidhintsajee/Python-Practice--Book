@@ -1,1 +1,79 @@
+6. Functional Programming
+6.1. Recursion
+6.1.1. Example: Computing Exponent
+Problem 1: Implement a function product to multiply 2 numbers recursively using + and - operators only.
 
+6.1.2. Example: Flatten a list
+Problem 2: Write a function flatten_dict to flatten a nested dictionary by joining the keys with . character.
+
+>>> flatten_dict({'a': 1, 'b': {'x': 2, 'y': 3}, 'c': 4})
+{'a': 1, 'b.x': 2, 'b.y': 3, 'c': 4}
+Problem 3: Write a function unflatten_dict to do reverse of flatten_dict.
+
+>>> unflatten_dict({'a': 1, 'b.x': 2, 'b.y': 3, 'c': 4})
+{'a': 1, 'b': {'x': 2, 'y': 3}, 'c': 4}
+Problem 4: Write a function treemap to map a function over nested list.
+
+>>> treemap(lambda x: x*x, [1, 2, [3, 4, [5]]])
+[1, 4, [9, 16, [25]]]
+Problem 5: Write a function tree_reverse to reverse elements of a nested-list recursively.
+
+>>> tree_reverse([[1, 2], [3, [4, 5]], 6])
+[6, [[5, 4], 3], [2, 1]]
+6.1.3. Example: JSON Encode
+Problem 6: Complete the above implementation of json_encode by handling the case of dictionaries.
+
+Problem 7: Implement a program dirtree.py that takes a directory as argument and prints all the files in that directory 
+recursively as a tree.
+
+Hint: Use os.listdir and os.path.isdir funtions.
+
+$ python dirtree.py foo/
+foo/
+|-- a.txt
+|-- b.txt
+|-- bar/
+|   |-- p.txt
+|   `-- q.txt
+`-- c.txt
+Problem 8: Write a function count_change to count the number of ways to change any given amount. Available coins are also 
+passed as argument to the function.
+
+>>> count_change(10, [1, 5])
+3
+>>> count_change(10, [1, 2])
+6
+>>> count_change(100, [1, 5, 10, 25, 50])
+292
+Problem 9: Write a function permute to compute all possible permutations of elements of a given list.
+
+>>> permute([1, 2, 3])
+[[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]
+6.2. Higher Order Functions & Decorators
+In Python, functions are first-class objects. They can be passed as arguments to other functions and a new functions can be
+returned from a function call.
+
+6.2.1. Example: Tracing Function Calls
+6.2.2. Example: Memoize
+Problem 10: Write a function profile, which takes a function as argument and returns a new function, which behaves exactly 
+similar to the given function, except that it prints the time consumed in executing it.
+
+>>> fib = profile(fib)
+>>> fib(20)
+time taken: 0.1 sec
+10946
+Problem 11: Write a function vectorize which takes a function f and return a new function, which takes a list as argument 
+and calls f for every element and returns the result as a list.
+
+>>> def square(x): return x * x
+...
+>>> f = vectorize(square)
+>>> f([1, 2, 3])
+[1, 4, 9]
+>>> g = vectorize(len)
+>>> g(["hello", "world"])
+[5, 5]
+>>> g([[1, 2], [2, 3, 4]])
+[2, 3]
+6.2.3. Example: unixcommand decorator
+6.3. exec & eval
